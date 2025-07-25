@@ -1,0 +1,8 @@
+{
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "name": "i love pdfly main",
+  "description": "",
+  "prompt": ""
+}
