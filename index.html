@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="FlpChcEaUhGCEkKdQ2c02AimbrUZe23aW2qWTJHir90" />
+    <title>I Love PDFLY - The PDF toolkit for your every need</title>
+    
+   <!-- SEO Meta Tags -->
+    <meta id="meta-description" name="description" content="I Love PDFLY offers a complete suite of free online PDF tools. Merge, split, compress, and convert your documents with ease. Instantly convert JPG to PDF, PDF to Word, and more. Our tools like 'I Love PDF Word to PDF' and 'JPG to PDF converter free' make document management simple, secure, and accessible for everyone." />
+    <meta id="meta-keywords" name="keywords" content="pdf, merge pdf, split pdf, compress pdf, convert pdf, pdf to word, pdf to jpg, word to pdf, jpg to pdf, edit pdf, unlock pdf, protect pdf, rotate pdf, watermark pdf, ocr pdf, free pdf tools, i love pdfly, i love pdf, i love pdf merge, i love pdf compress, pdf to excel, I Love PDF Word to PDF, JPG to PDF, Compress PDF, I love PDF JPG to PDF, PDF to Word, I love PDF to Excel, I Love PDF merge, JPG to PDF converter free, Image to PDF, Image to PDF converter free download, document management, online pdf editor, ilovepdf, iloveapi, free pdf converter" />
+    <link rel="canonical" href="https://ilovepdfly.com/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ilovepdfly.com/" />
+    <meta property="og:title" content="I Love PDFLY - The Ultimate Free PDF Toolkit" />
+    <meta property="og:description" content="Merge, split, compress, convert, and edit your PDF files for free. Fast, easy, and online." />
+    <meta property="og:image" content="https://ilovepdfly.com/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ilovepdfly.com/" />
+    <meta property="twitter:title" content="I Love PDFLY - The Ultimate Free PDF Toolkit" />
+    <meta property="twitter:description" content="Merge, split, compress, convert, and edit your PDF files for free. Fast, easy, and online." />
+    <meta property="twitter:image" content="https://ilovepdfly.com/og-image.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Pacifico&family=Homemade+Apple&family=Kalam:wght@300;400;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <!-- TrustBox script -->
+    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+    <!-- End TrustBox script -->
+    <script>
+      // Configure Tailwind for dark mode and custom colors
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'brand-red': '#c5110c',
+              'brand-red-dark': '#a20d08',
+            },
+            fontFamily: {
+              sans: ['Nunito', 'sans-serif'],
+              pacifico: ['Pacifico', 'cursive'],
+              'dancing-script': ['Dancing Script', 'cursive'],
+              caveat: ['Caveat', 'cursive'],
+              'great-vibes': ['Great Vibes', 'cursive'],
+              'homemade-apple': ['Homemade Apple', 'cursive'],
+              kalam: ['Kalam', 'cursive'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* This is needed for the custom font families to be applied correctly with Tailwind JIT */
+      .font-pacifico { font-family: 'Pacifico', cursive; }
+      .font-dancing-script { font-family: 'Dancing Script', cursive; }
+      .font-caveat { font-family: 'Caveat', cursive; }
+      .font-great-vibes { font-family: 'Great Vibes', 'cursive'; }
+      .font-homemade-apple { font-family: 'Homemade Apple', 'cursive'; }
+      .font-kalam { font-family: 'Kalam', 'cursive'; }
+      
+      body {
+        font-family: 'Nunito', sans-serif;
+      }
+
+       /* Keyframes for animations */
+      @keyframes float-1 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+      @keyframes float-2 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(15px); } }
+      @keyframes float-3 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+      .animate-float-1 { animation: float-1 4s ease-in-out infinite; }
+      .animate-float-2 { animation: float-2 5s ease-in-out infinite; }
+      .animate-float-3 { animation: float-3 3s ease-in-out infinite; }
+      
+      .scroll-animate {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .scroll-animate.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      @keyframes marquee {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+      }
+      .animate-marquee {
+        animation: marquee 60s linear infinite;
+      }
+
+      @keyframes pulse-glow-border {
+        0%, 100% { border-color: rgba(229, 57, 53, 0.4); }
+        50% { border-color: rgba(229, 57, 53, 1); }
+      }
+      .border-glow-hover:hover {
+        border-color: #c5110c;
+        transition: border-color 0.3s ease-in-out;
+      }
+      
+       @keyframes fade-in-down {
+        0% { opacity: 0; transform: translateY(-20px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in-down {
+        animation: fade-in-down 0.5s ease-out forwards;
+      }
+
+      @keyframes fade-in-up {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in-up {
+        animation: fade-in-up 0.5s ease-out forwards;
+      }
+      
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      
+      /* A4 Simulation for CV Generator */
+      .A4-size-simulation {
+          width: 210mm;
+          min-height: 297mm;
+          box-sizing: border-box;
+      }
+
+      /* Light Mode Fallback Styles */
+      /* This ensures light mode works correctly on deployed sites where Tailwind's JIT compiler might have issues. */
+      .bg-white { background-color: #ffffff !important; }
+      .bg-gray-50 { background-color: rgb(249 250 251) !important; }
+      .bg-gray-100 { background-color: rgb(243 244 246) !important; }
+      .bg-red-50 { background-color: rgb(254 242 242) !important; }
+      .bg-yellow-100 { background-color: rgb(254 252 232) !important; }
+      .hover\:bg-gray-100:hover { background-color: rgb(243 244 246) !important; }
+      .hover\:bg-red-50:hover { background-color: rgb(254 242 242) !important; }
+
+      .text-gray-500 { color: rgb(107 114 128) !important; }
+      .text-gray-600 { color: rgb(75 85 99) !important; }
+      .text-gray-700 { color: rgb(55 65 81) !important; }
+      .text-gray-800 { color: rgb(31 41 55) !important; }
+      .text-gray-900 { color: rgb(17 24 39) !important; }
+      .text-yellow-800 { color: rgb(133 77 14) !important; }
+      .hover\:text-brand-red:hover { color: #c5110c !important; }
+
+      .border-gray-200 { border-color: rgb(229 231 235) !important; }
+      .border-gray-300 { border-color: rgb(209 213 219) !important; }
+      .border-yellow-400 { border-color: rgb(250 204 21) !important; }
+      .hover\:border-brand-red:hover { border-color: #c5110c !important; }
+
+      /* Dark Mode Fallback Styles */
+      /* This ensures dark mode works correctly on deployed sites where Tailwind's JIT compiler might have issues. */
+      .dark .dark\:bg-black { background-color: #000 !important; }
+      .dark .dark\:bg-gray-800 { background-color: rgb(31 41 55) !important; }
+      .dark .dark\:bg-gray-900 { background-color: rgb(17 24 39) !important; }
+      .dark .dark\:bg-white { background-color: #fff !important; }
+
+      /* Backgrounds with opacity */
+      .dark .dark\:bg-black\/50 { background-color: rgba(0, 0, 0, 0.5) !important; }
+      .dark .dark\:bg-black\/60 { background-color: rgba(0, 0, 0, 0.6) !important; }
+      .dark .dark\:bg-black\/70 { background-color: rgba(0, 0, 0, 0.7) !important; }
+      .dark .dark\:bg-black\/80 { background-color: rgba(0, 0, 0, 0.8) !important; }
+      .dark .dark\:bg-gray-800\/50 { background-color: rgba(31, 41, 55, 0.5) !important; }
+      .dark .dark\:bg-gray-900\/50 { background-color: rgba(17, 24, 39, 0.5) !important; }
+      .dark .dark\:bg-red-900\/20 { background-color: rgba(76, 29, 29, 0.2) !important; }
+      .dark .dark\:bg-red-900\/30 { background-color: rgba(76, 29, 29, 0.3) !important; }
+      .dark .dark\:bg-red-900\/50 { background-color: rgba(76, 29, 29, 0.5) !important; }
+      .dark .dark\:bg-yellow-900\/50 { background-color: rgba(74, 58, 16, 0.5) !important; }
+      .dark .dark\:bg-green-900\/50 { background-color: rgba(22, 101, 52, 0.5) !important; }
+
+      /* Text Colors */
+      .dark .dark\:text-white { color: #fff !important; }
+      .dark .dark\:text-gray-50 { color: rgb(249 250 251) !important; }
+      .dark .dark\:text-gray-100 { color: rgb(243 244 246) !important; }
+      .dark .dark\:text-gray-200 { color: rgb(229 231 235) !important; }
+      .dark .dark\:text-gray-300 { color: rgb(209 213 219) !important; }
+      .dark .dark\:text-gray-400 { color: rgb(156 163 175) !important; }
+      .dark .dark\:text-yellow-300 { color: rgb(253 224 71) !important; }
+      .dark .dark\:text-red-400 { color: rgb(248 113 113) !important; }
+      .dark .dark\:text-green-300 { color: rgb(134 239 172) !important; }
+      .dark .dark\:text-green-400 { color: rgb(74 222 128) !important; }
+      
+      /* Border Colors */
+      .dark .dark\:border-gray-600 { border-color: rgb(75 85 99) !important; }
+      .dark .dark\:border-gray-700 { border-color: rgb(55 65 81) !important; }
+      .dark .dark\:border-gray-800 { border-color: rgb(31 41 55) !important; }
+      .dark .dark\:border-yellow-600 { border-color: rgb(202 138 4) !important; }
+      .dark .dark\:border-red-600 { border-color: rgb(220 38 38) !important; }
+
+      /* Hover States */
+      .dark .dark\:hover\:bg-gray-800:hover { background-color: rgb(31 41 55) !important; }
+      .dark .dark\:hover\:bg-gray-700:hover { background-color: rgb(55 65 81) !important; }
+      .dark .dark\:hover\:bg-gray-600:hover { background-color: rgb(75 85 99) !important; }
+      .dark .dark\:hover\:bg-red-900\/20:hover { background-color: rgba(76, 29, 29, 0.2) !important; }
+      .dark .dark\:hover\:text-brand-red:hover { color: #c5110c !important; }
+      .dark .dark\:hover\:text-white:hover { color: #fff !important; }
+
+      /* Gradients */
+      .dark .dark\:from-black::before { --tw-gradient-from: #000; --tw-gradient-to: rgba(0,0,0,0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+
+      /* Prose Invert */
+      .dark .dark\:prose-invert {
+        --tw-prose-body: #d1d5db;
+        --tw-prose-headings: #fff;
+        --tw-prose-bold: #fff;
+        --tw-prose-links: #fff;
+        --tw-prose-hr: #4b5563;
+        --tw-prose-quotes: #f3f4f6;
+      }
+    </style>
+  <link rel="modulepreload" href="https://esm.sh/react@^19.1.0">
+  <link rel="modulepreload" href="https://esm.sh/react-dom@^19.1.0/">
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "I Love PDFLY",
+      "url": "https://ilovepdfly.com/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "I Love PDFLY",
+        "url": "https://ilovepdfly.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ilovepdfly.com/favicon.png"
+        },
+        "sameAs": [
+          "https://www.facebook.com/share/16sdjGNVGr/?mibextid=wwXIfr",
+          "https://wa.me/message/JYA22CVSYSZ4N1",
+          "https://www.youtube.com/@btmobilecare"
+        ]
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://ilovepdfly.com/#/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Main Navigation",
+      "itemListElement": [
+        {
+          "@type": "SiteNavigationElement",
+          "position": 1,
+          "name": "Merge PDF",
+          "description": "Combine multiple PDFs into one single document.",
+          "url": "https://ilovepdfly.com/#/merge-pdf"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 2,
+          "name": "Split PDF",
+          "description": "Separate one page or a whole set for easy conversion into independent PDF files.",
+          "url": "https://ilovepdfly.com/#/split-pdf"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 3,
+          "name": "Compress PDF",
+          "description": "Drastically reduce the file size of your PDF documents.",
+          "url": "https://ilovepdfly.com/#/compress-pdf"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 4,
+          "name": "JPG to PDF",
+          "description": "Convert JPG, PNG, and other image files to PDF.",
+          "url": "https://ilovepdfly.com/#/jpg-to-pdf"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 5,
+          "name": "PDF to Word",
+          "description": "Turn your PDF into an editable DOCX file.",
+          "url": "https://ilovepdfly.com/#/pdf-to-word"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 6,
+          "name": "Blog",
+          "description": "Tips, tricks, and updates from our team to help you make the most of our PDF tools.",
+          "url": "https://ilovepdfly.com/#/blog"
+        }
+      ]
+    }
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P5XW4L7TBK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P5XW4L7TBK');
+</script>
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.7.0",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react-dropzone": "https://esm.sh/react-dropzone@^14.3.8",
+    "pdf-lib": "https://esm.sh/pdf-lib@^1.17.1",
+    "jszip": "https://esm.sh/jszip@^3.10.1",
+    "docx": "https://esm.sh/docx@^9.5.1",
+    "pdfjs-dist/": "https://esm.sh/pdfjs-dist@^5.3.93/",
+    "tesseract.js": "https://esm.sh/tesseract.js@^6.0.1",
+    "mammoth": "https://esm.sh/mammoth@^1.9.1",
+    "jspdf": "https://esm.sh/jspdf@^3.0.1",
+    "html2canvas": "https://esm.sh/html2canvas@^1.4.1",
+    "xlsx": "https://esm.sh/xlsx@^0.18.5",
+    "pptxgenjs": "https://esm.sh/pptxgenjs@^4.0.1",
+    "pixelmatch": "https://esm.sh/pixelmatch@^7.1.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.10.0",
+    "vite": "https://esm.sh/vite@^7.0.5",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^4.6.0",
+    "pdfjs-dist": "https://esm.sh/pdfjs-dist@^5.3.93",
+    "@imgly/background-removal": "https://esm.sh/@imgly/background-removal@^1.5.0",
+    "ag-psd": "https://esm.sh/ag-psd@^9.1.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/main-CrX-92en.js"></script>
+</head>
+  <body class="bg-white dark:bg-black">
+    <div id="root"></div>
+</body>
+</html>
