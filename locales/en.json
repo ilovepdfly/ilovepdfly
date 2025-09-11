@@ -1,3 +1,4 @@
+
 {
   "header": {
     "merge_pdf": "MERGE PDF",
@@ -101,9 +102,8 @@
       "description": "Reduce file size while optimizing for maximal PDF quality."
     },
     "repair-pdf": {
-      "title": "Repair PDF file",
-      "description": "Upload a corrupt PDF and we will try to fix it. Depending on how much the PDF is damaged we will be able to recover it partially or completely.",
-      "infoText": "We will try to repair your PDFs. You can get a different file format on download if we detect that format in your file."
+      "title": "Repair PDF",
+      "description": "Repair a damaged PDF and recover data from corrupt PDF. Fix PDF files with our Repair tool."
     },
     "resize-file": {
       "title": "Resize File",
